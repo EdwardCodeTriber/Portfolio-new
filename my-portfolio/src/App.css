@@ -1,0 +1,16 @@
+.cover-page {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.cover-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.cover-details {
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
