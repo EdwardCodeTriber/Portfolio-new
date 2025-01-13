@@ -1,5 +1,4 @@
-import React from "react";
-import picture from "../assets/image2.jpg";
+import picture from "../../public/image2.jpg";
 import storm from "../assets/image.jpg";
 import code from "../assets/code.jpg";
 import work from "../assets/work.jpg";
@@ -22,7 +21,7 @@ const Home = () => {
           <a href="#contact">Contact</a>
         </ul>
 
-        <i class="bx bx-menu-alt-right" id="menu"></i>
+        <i className="bx bx-menu-alt-right" id="menu"></i>
 
         <a href="#contact" className="btn">
           Contact Me
