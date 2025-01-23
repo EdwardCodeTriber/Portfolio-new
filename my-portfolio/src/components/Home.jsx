@@ -82,19 +82,19 @@ const Home = () => {
             <ul>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>HTML
+                  <i className="bx bx-chevron-right"></i>HTML
                 </span>
                 <span>Intermediate</span>
               </li>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>CSS
+                  <i className="bx bx-chevron-right"></i>CSS
                 </span>
                 <span>Intermediate</span>
               </li>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>Javascript
+                  <i className="bx bx-chevron-right"></i>Javascript
                 </span>
                 <span>Intermediate</span>
               </li>
@@ -102,25 +102,25 @@ const Home = () => {
             <ul>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>React
+                  <i className="bx bx-chevron-right"></i>React
                 </span>
                 <span>Beginner</span>
               </li>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>MongoDB
+                  <i className="bx bx-chevron-right"></i>MongoDB
                 </span>
                 <span>Beginner</span>
               </li>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>Node
+                  <i className="bx bx-chevron-right"></i>Node
                 </span>
                 <span>Beginner</span>
               </li>
               <li>
                 <span>
-                  <i class="bx bx-chevron-right"></i>React Native
+                  <i className="bx bx-chevron-right"></i>React Native
                 </span>
                 <span>Beginner</span>
               </li>
@@ -212,19 +212,19 @@ const Home = () => {
         <div className="col-left">
           <div className="col-box">
             <span>
-              <i class="bx bxs-location-plus"></i>
+              <i className="bx bxs-location-plus"></i>
             </span>
             <span>15760 alpine St., Glen Ridge Soweto</span>
           </div>
           <div className="col-box">
             <span>
-              <i class="bx bx-phone"></i>
+              <i className="bx bx-phone"></i>
             </span>
             <span>067 759 7654</span>
           </div>
           <div className="col-box">
             <span>
-              <i class="bx bx-envelope"></i>
+              <i className="bx bx-envelope"></i>
             </span>
             <span>edwardthapelo55@gmail.com</span>
           </div>
@@ -243,10 +243,10 @@ const Home = () => {
           </p>
           <div className="social-icons">
             <span>
-              <i class="bx bxl-linkedin-square"></i>
+              <i className="bx bxl-linkedin-square"></i>
             </span>
             <span>
-              <i class="bx bxl-github" href=""></i>
+              <i className="bx bxl-github" href=""></i>
             </span>
           </div>
         </div>
