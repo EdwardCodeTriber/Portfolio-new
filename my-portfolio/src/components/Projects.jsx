@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 // import "./project.css"
 
 const Projects = () => {
@@ -7,7 +7,7 @@ const Projects = () => {
 
   useEffect(() => {
     // Simulating fetching data from a JSON file or API
-    fetch("/src/project.json")
+    fetch("https://node-server-tawny-nu.vercel.app/api/projects")
       .then((response) => response.json())
       .then((data) => setProjectsData(data.projects))
       .catch((error) => console.error("Error fetching projects data:", error));
@@ -81,7 +81,7 @@ const Projects = () => {
       </div>
       <div className="projects-list">{renderProjects()}</div>
 
-      <style jsx>{`
+      <style >{`
         .topics button {
             
           margin: 20px 5px 5px;
