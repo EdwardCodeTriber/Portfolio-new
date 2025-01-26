@@ -5,7 +5,7 @@ import work from "../assets/work.jpg";
 import codeline from "../assets/codeline.jpg";
 import "./style.css";
 import Projects from "./Projects";
-import cv from "../assets/Resume_Of_Thapelo_Edward_Somo.pdf";
+import cv from "../assets/Thapelo_CV_Resume.pdf";
 
 const Home = () => {
   return (
