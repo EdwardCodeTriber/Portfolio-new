@@ -243,10 +243,10 @@ const Home = () => {
           </p>
           <div className="social-icons">
             <span>
-              <i className="bx bxl-linkedin-square"></i>
+              <i className="bx bxl-linkedin-square" href="www.linkedin.com/in/thapelo-somo-824125278"></i>
             </span>
             <span>
-              <i className="bx bxl-github" href=""></i>
+              <i className="bx bxl-github" href="https://github.com/EdwardCodeTriber"></i>
             </span>
           </div>
         </div>
