@@ -32,7 +32,7 @@ const Home = () => {
 
         <div className="info-box">
           <h1>
-            <span>Hello, I'm Edward</span>
+            <span>Hello, I am Edward</span>
           </h1>
           <h3>
             <span>MERN Stack Developer</span> based in Soweto
@@ -60,7 +60,7 @@ const Home = () => {
               <span>About Me</span>
             </h1>
             <p>
-              I'm a Junior MERN (MongoDB, Express.js, React, Node.js) stack
+              I am a Entry level MERN (MongoDB, Express.js, React, Node.js) stack
               developer with a passion for collaborative software development.
               My expertise spans full-stack web application development, where I
               specialize in creating scalable and interactive web solutions. I
@@ -69,7 +69,7 @@ const Home = () => {
               portfolio includes complex applications that demonstrate
               proficiency in both front-end and back-end technologies,
               showcasing my ability to design responsive user interfaces and
-              develop robust server-side logic. I'm committed to continuous
+              develop robust server-side logic. I am committed to continuous
               learning, staying updated with the latest web development trends,
               and solving intricate technical challenges through innovative
               coding approaches and effective teamwork.{" "}
@@ -236,7 +236,7 @@ const Home = () => {
             creation of full-stack web applications, RESTful APIs, and dynamic
             front-end interfaces. My services cover responsive design, seamless
             database integration, and performance optimization, ensuring secure
-            and scalable solutions tailored to your specific needs. Whether it's
+            and scalable solutions tailored to your specific needs. Whether it is
             building a new application from scratch or enhancing an existing
             project, I deliver high-quality, efficient, and user-friendly web
             solutions.
