@@ -6,8 +6,55 @@ import codeline from "../assets/codeline.jpg";
 import "./style.css";
 import Projects from "./Projects";
 import cv from "../assets/Thapelo_CV_Resume.pdf";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const Home = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!formData.email || !formData.name || !formData.message) {
+      setStatus("Please fill out all fields.");
+      return;
+    }
+
+    const templateParams = {
+      user_name: formData.name,
+      user_email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_48oq4ec", // Replace with your EmailJS Service ID
+        "template_t34a7q4", // Replace with your EmailJS Template ID
+        templateParams,
+        "xHp1qpwr5AqSHUcvU" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (response) => {
+          // console.log("Email sent successfully!", response);
+          setStatus("Email sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          // console.error("Error sending email:", error);
+          setStatus("Failed to send email. Try again later.");
+        }
+      );
+  };
   return (
     <div>
       <nav>
@@ -60,19 +107,19 @@ const Home = () => {
               <span>About Me</span>
             </h1>
             <p>
-              I am a Entry level MERN (MongoDB, Express.js, React, Node.js) stack
-              developer with a passion for collaborative software development.
-              My expertise spans full-stack web application development, where I
-              specialize in creating scalable and interactive web solutions. I
-              thrive in team environments and actively seek out challenging
-              projects that push the boundaries of my technical skills. My
-              portfolio includes complex applications that demonstrate
-              proficiency in both front-end and back-end technologies,
-              showcasing my ability to design responsive user interfaces and
-              develop robust server-side logic. I am committed to continuous
-              learning, staying updated with the latest web development trends,
-              and solving intricate technical challenges through innovative
-              coding approaches and effective teamwork.{" "}
+              I am a Entry level MERN (MongoDB, Express.js, React, Node.js)
+              stack developer with a passion for collaborative software
+              development. My expertise spans full-stack web application
+              development, where I specialize in creating scalable and
+              interactive web solutions. I thrive in team environments and
+              actively seek out challenging projects that push the boundaries of
+              my technical skills. My portfolio includes complex applications
+              that demonstrate proficiency in both front-end and back-end
+              technologies, showcasing my ability to design responsive user
+              interfaces and develop robust server-side logic. I am committed to
+              continuous learning, staying updated with the latest web
+              development trends, and solving intricate technical challenges
+              through innovative coding approaches and effective teamwork.{" "}
             </p>
           </div>
           <h2>
@@ -187,7 +234,7 @@ const Home = () => {
         <Projects />
       </section>
 
-      <section id="contact">
+      {/* <section id="contact">
         <div className="header">
           <span>Contact</span>
         </div>
@@ -205,6 +252,49 @@ const Home = () => {
             <input type="text" placeholder="Enter your Massage here" />
           </div>
           <div className="btn">Submit</div>
+        </form>
+      </section> */}
+      <section id="contact">
+        <div className="header">
+          <span>Contact</span>
+        </div>
+        <form onSubmit={sendEmail}>
+          <div className="input-box">
+            <span>Full Name</span>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your Full Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box">
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="input-box">
+            <span>Your Message</span>
+            <textarea
+              name="message"
+              placeholder="Enter your message here"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button type="submit" className="btn">
+            Submit
+          </button>
+          {status && <p className="status-message">{status}</p>}
         </form>
       </section>
 
@@ -236,17 +326,21 @@ const Home = () => {
             creation of full-stack web applications, RESTful APIs, and dynamic
             front-end interfaces. My services cover responsive design, seamless
             database integration, and performance optimization, ensuring secure
-            and scalable solutions tailored to your specific needs. Whether it is
-            building a new application from scratch or enhancing an existing
+            and scalable solutions tailored to your specific needs. Whether it
+            is building a new application from scratch or enhancing an existing
             project, I deliver high-quality, efficient, and user-friendly web
             solutions.
           </p>
           <div className="social-icons">
             <span>
-              <a href="www.linkedin.com/in/thapelo-somo-824125278"><i className="bx bxl-linkedin-square"></i></a>
+              <a href="www.linkedin.com/in/thapelo-somo-824125278">
+                <i className="bx bxl-linkedin-square"></i>
+              </a>
             </span>
             <span>
-              <a href="https://github.com/EdwardCodeTriber"><i className="bx bxl-github" ></i></a>
+              <a href="https://github.com/EdwardCodeTriber">
+                <i className="bx bxl-github"></i>
+              </a>
             </span>
           </div>
         </div>
