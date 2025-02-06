@@ -320,6 +320,7 @@ footer{
     .links{
         position: absolute;
         top: 100%;
+        right:0;
         width: 100%;
         padding: 1em 3em;
         color: white;
