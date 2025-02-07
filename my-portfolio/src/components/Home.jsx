@@ -38,19 +38,17 @@ const Home = () => {
 
     emailjs
       .send(
-        "service_48oq4ec", // Replace with your EmailJS Service ID
-        "template_t34a7q4", // Replace with your EmailJS Template ID
+        "service_48oq4ec",
+        "template_t34a7q4", 
         templateParams,
-        "xHp1qpwr5AqSHUcvU" // Replace with your EmailJS Public Key
+        "xHp1qpwr5AqSHUcvU" 
       )
       .then(
         (response) => {
-          // console.log("Email sent successfully!", response);
           setStatus("Email sent successfully!");
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
-          // console.error("Error sending email:", error);
           setStatus("Failed to send email. Try again later.");
         }
       );
